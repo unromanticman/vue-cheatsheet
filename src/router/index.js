@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import VuexDemo from '../views/VuexDemo.vue'
 import LifeCycle from '../views/LifeCycle.vue'
+import ComponentDemo from '../views/ComponentDemo.vue'
 
 Vue.use(VueRouter)
 
@@ -31,6 +32,12 @@ const routes = [
     name: 'LifeCycle',
     component: LifeCycle,
     props: { pageName: 'LifeCycle' }
+  },
+  {
+    path: '/componentDemo',
+    name: 'ComponentDemo',
+    component: ComponentDemo,
+    props: { pageName: 'ComponentDemo' }
   }
 ]
 
