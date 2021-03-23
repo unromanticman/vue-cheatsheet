@@ -1,6 +1,6 @@
 # cheatsheet
 
-在此紀錄Vue常用的元件、用法整理，方便需要時參考使用。  
+在此紀錄Vue常用的元件、用法整理，方便需要時參考使用。(此份專案使用官方提供Vue CLI產生。)  
 這份比較偏向實際應用型，如果是基礎可以參考[Learn-Vue](https://github.com/unromanticman/Learn-Vue)這篇。
 
 已追加內容：
