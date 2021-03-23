@@ -7,7 +7,9 @@
       <router-link to="/lifeCycle">LifeCycle</router-link> |
       <router-link to="/componentDemo">ComponentDemo</router-link>
     </div>
-    <router-view />
+    <vue-page-transition name="fade-in-up">
+      <router-view />
+    </vue-page-transition>
   </div>
 </template>
 
