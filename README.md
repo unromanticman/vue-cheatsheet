@@ -1,5 +1,7 @@
 # cheatsheet
 
+在此紀錄Vue常用的元件、用法整理，方便需要時參考使用。
+
 ## Project setup
 ```
 npm install
