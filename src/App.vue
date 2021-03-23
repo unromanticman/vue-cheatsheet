@@ -5,7 +5,8 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/vuexDemo">VuexDemo</router-link> |
       <router-link to="/lifeCycle">LifeCycle</router-link> |
-      <router-link to="/componentDemo">ComponentDemo</router-link>
+      <router-link to="/componentDemo">ComponentDemo</router-link> |
+      <router-link to="/apiDemo">API Demo</router-link>
     </div>
     <vue-page-transition name="fade-in-up">
       <router-view />

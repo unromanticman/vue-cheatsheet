@@ -5,6 +5,7 @@ import About from '../views/About.vue'
 import VuexDemo from '../views/VuexDemo.vue'
 import LifeCycle from '../views/LifeCycle.vue'
 import ComponentDemo from '../views/ComponentDemo.vue'
+import APIDemo from '../views/APIDemo.vue'
 
 Vue.use(VueRouter)
 
@@ -38,6 +39,12 @@ const routes = [
     name: 'ComponentDemo',
     component: ComponentDemo,
     props: { pageName: 'ComponentDemo' }
+  },
+  {
+    path: '/apiDemo',
+    name: 'APIDemo',
+    component: APIDemo,
+    props: { pageName: 'API Demo' }
   }
 ]
 
