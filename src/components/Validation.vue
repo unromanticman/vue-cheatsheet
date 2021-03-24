@@ -28,4 +28,8 @@ export default {
 .validation-error > input {
   border: 1px solid red;
 }
+.validation-error > input:focus,
+textarea:focus {
+  outline: none;
+}
 </style>
