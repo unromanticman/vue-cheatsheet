@@ -7,6 +7,7 @@ import LifeCycle from '../views/LifeCycle.vue'
 import ComponentDemo from '../views/ComponentDemo.vue'
 import APIDemo from '../views/APIDemo.vue'
 import ValidactionDemo from '../views/ValidactionDemo.vue'
+import TableDemo from '../views/TableDemo.vue'
 
 Vue.use(VueRouter)
 
@@ -52,7 +53,14 @@ const routes = [
     name: 'APIDemo',
     component: ValidactionDemo,
     props: { pageName: 'ValidactionDemo' }
-  }
+  },
+  {
+    path: '/tableDemo',
+    name: 'TableDemo',
+    component: TableDemo,
+    props: { pageName: 'TableDemo' }
+  },
+  
 ]
 
 const router = new VueRouter({

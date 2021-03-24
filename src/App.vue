@@ -7,7 +7,8 @@
       <router-link to="/lifeCycle">LifeCycle</router-link> |
       <router-link to="/componentDemo">ComponentDemo</router-link> |
       <router-link to="/apiDemo">API Demo</router-link> |
-      <router-link to="/validactionDemo">ValidactionDemo</router-link>
+      <router-link to="/validactionDemo">ValidactionDemo</router-link> |
+      <router-link to="/tableDemo">TableDemo</router-link>
     </div>
     <vue-page-transition name="fade-in-up">
       <router-view />
