@@ -11,7 +11,6 @@
           id="my-table"
           :items="items"
           :per-page="perPage"
-          :select-mode="selectMode"
           :current-page="currentPage"
           small
           hover
