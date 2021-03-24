@@ -14,7 +14,7 @@
 6.  API串接範例
 7.  頁面特效
 8.  驗證錯誤用提示元件
-
+9.  BootstrapVue Table元件使用範例
 
 ## Project setup
 ```
