@@ -42,7 +42,6 @@ export default {
     return {
       perPage: 3,
       currentPage: 1,
-      selectMode: "multi",
       column: [
         {
           key: "selected",
