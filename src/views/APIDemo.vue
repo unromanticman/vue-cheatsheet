@@ -16,7 +16,13 @@
 export default {
   name: "APIDemo",
   props: ["pageName"],
-  mounted: function () {
+  data: function () {
+    return {
+      randomUser: null,
+    };
+  },
+  created: function () {
+    // 此時以可以處理data中資料
     // 用於頁面載入時使用
     // 呼叫API
     fetch("https://randomuser.me/api/")
@@ -27,10 +33,9 @@ export default {
         }
       });
   },
-  data: function () {
-    return {
-      randomUser: null,
-    };
-  },
+  mounted: function () {
+    // dom 初始完成如果要操作dom可以在這裡
+
+  }
 };
 </script>
