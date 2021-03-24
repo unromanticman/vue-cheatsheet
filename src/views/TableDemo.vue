@@ -5,16 +5,22 @@
     <p>Use VueBootstrap Table</p>
     <div class="container">
       <div class="overflow-auto text-left">
+        <div class="text-left mb-2" v-if="selectedCount > 0">selectedCount:{{ selectedCount }}</div>
         <b-table
           striped
           id="my-table"
           :items="items"
           :per-page="perPage"
+          :select-mode="selectMode"
           :current-page="currentPage"
           small
           hover
           :fields="column"
-        ></b-table>
+        >
+          <template v-slot:cell(selected)="data">
+            <input type="checkbox" v-model="data.item.selected" />
+          </template>
+        </b-table>
         <div style="margin: auto; text-align: center">
           <b-pagination
             align="center"
@@ -37,7 +43,15 @@ export default {
     return {
       perPage: 3,
       currentPage: 1,
+      selectMode: "multi",
       column: [
+        {
+          key: "selected",
+          label: "selected",
+          thStyle: {
+            width: "10%",
+          },
+        },
         {
           key: "id",
           sortable: true,
@@ -77,9 +91,20 @@ export default {
       ],
     };
   },
+  watch: {
+    items: {
+      handler: function (newVal) {
+        console.log("item:", newVal);
+      },
+      deep: true,
+    },
+  },
   computed: {
     rows() {
       return this.items.length;
+    },
+    selectedCount: function () {
+      return this.items.filter((it) => it.selected).length;
     },
   },
 };
