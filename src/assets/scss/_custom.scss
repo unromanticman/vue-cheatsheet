@@ -4,8 +4,6 @@
 body{
     background-color: $main-color02;
     font-size: 14px;
-  
-
 }
 
 .bg-watermark{
@@ -21,13 +19,14 @@ body{
         padding-left: 3px;
         padding-right: 3px;
         color:$main-color01  !important;
+        &:hover{
+            text-decoration: none;
+            color:lighten($main-color01, 10)  !important;
+        }
         &.router-link-exact-active{
             color:$main-color03  !important;
         }
-        &:hover{
-            text-decoration: none;
-            
-        }
+       
     }
 }
 
@@ -50,4 +49,10 @@ body{
         color:#186FB1;
         font-weight: normal;
     }
+}
+
+
+
+.form-control:focus {
+    box-shadow: none;
 }

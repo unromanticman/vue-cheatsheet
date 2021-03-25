@@ -22,14 +22,14 @@ export default {
 
 <style>
 .validation-error > .validation-text {
-  color: red;
+  color: red !important;
   margin-top: 5px;
 }
 .validation-error > input {
-  border: 1px solid red;
+  border: 1px solid red !important;
 }
 .validation-error > input:focus,
 textarea:focus {
-  outline: none;
+  outline: none !important;
 }
 </style>

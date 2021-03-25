@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
 import VuexDemo from '../views/VuexDemo.vue'
 import LifeCycle from '../views/LifeCycle.vue'
 import ComponentDemo from '../views/ComponentDemo.vue'
@@ -16,25 +15,19 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    props: { pageName: 'Home' }
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: About,
-    props: { pageName: 'About' }
+    props: { pageName: '首頁' }
   },
   {
     path: '/vuexDemo',
     name: 'VuexDemo',
     component: VuexDemo,
-    props: { pageName: 'VuexDemo' }
+    props: { pageName: 'Vuex Demo' }
   },
   {
     path: '/lifeCycle',
     name: 'LifeCycle',
     component: LifeCycle,
-    props: { pageName: 'LifeCycle' }
+    props: { pageName: 'LifeCycle Demo' }
   },
   {
     path: '/componentDemo',
@@ -52,13 +45,13 @@ const routes = [
     path: '/validactionDemo',
     name: 'APIDemo',
     component: ValidactionDemo,
-    props: { pageName: 'ValidactionDemo' }
+    props: { pageName: 'Validaction Demo' }
   },
   {
     path: '/tableDemo',
     name: 'TableDemo',
     component: TableDemo,
-    props: { pageName: 'TableDemo' }
+    props: { pageName: 'Table Demo' }
   },
   
 ]

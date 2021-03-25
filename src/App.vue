@@ -12,14 +12,13 @@
 
       <div class="col-12 bg-white p-3 mb-3">
         <div id="nav" class="text-left">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link> |
-          <router-link to="/vuexDemo">VuexDemo</router-link> |
-          <router-link to="/lifeCycle">LifeCycle</router-link> |
-          <router-link to="/componentDemo">ComponentDemo</router-link> |
+          <router-link to="/">首頁</router-link> |
+          <router-link to="/vuexDemo">Vuex Demo</router-link> |
+          <router-link to="/lifeCycle">LifeCycle Demo</router-link> |
+          <router-link to="/componentDemo">Component Demo</router-link> |
           <router-link to="/apiDemo">API Demo</router-link> |
-          <router-link to="/validactionDemo">ValidactionDemo</router-link> |
-          <router-link to="/tableDemo">TableDemo</router-link>
+          <router-link to="/validactionDemo">Validaction Demo</router-link> |
+          <router-link to="/tableDemo">Table Demo</router-link>
         </div>
       </div>
       <vue-page-transition name="fade-in-up">
