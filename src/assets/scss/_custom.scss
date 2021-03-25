@@ -1,0 +1,53 @@
+*{
+    font-family: "Noto Sans TC", sans-serif;
+}
+body{
+    background-color: $main-color02;
+    font-size: 14px;
+  
+
+}
+
+.bg-watermark{
+    z-index: -1;
+    width:100%;
+    position: absolute;
+    height: 300px;
+    background-image: url('./../images/triangle-mosaic.png');
+}
+
+#nav{
+    a{
+        padding-left: 3px;
+        padding-right: 3px;
+        color:$main-color01  !important;
+        &.router-link-exact-active{
+            color:$main-color03  !important;
+        }
+        &:hover{
+            text-decoration: none;
+            
+        }
+    }
+}
+
+.header{
+    .title{
+        color:$main-color01;
+        font-size: 27px;
+        font-weight: bold;
+    }
+}
+
+.page{
+    .title{
+        font-size: 17px;
+        color:$main-color01;
+        font-weight: bold;
+    }
+    .goCode{
+        font-size: 14px;
+        color:#186FB1;
+        font-weight: normal;
+    }
+}
