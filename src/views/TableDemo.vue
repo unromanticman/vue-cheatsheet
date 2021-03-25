@@ -1,34 +1,55 @@
 <template>
-  <div class="about">
-    <h1>{{ pageName }}</h1>
-    <h1>This is a table demo.</h1>
-    <p>Use VueBootstrap Table</p>
-    <div class="container">
-      <div class="overflow-auto text-left">
-        <div class="text-left mb-2" v-if="selectedCount > 0">selectedCount:{{ selectedCount }}</div>
-        <b-table
-          striped
-          id="my-table"
-          :items="items"
-          :per-page="perPage"
-          :current-page="currentPage"
-          small
-          hover
-          :fields="column"
+  <div class="page">
+    <div class="col-12 bg-white py-3 mb-3">
+      <div class="title mb-2">範例：{{ pageName }}</div>
+      <div class="description">
+        這是Vue的Table範例，使用到了<a target="_blank" href="https://bootstrap-vue.org/"
+          >BootstrapVue</a
+        >。<br />
+        在這範例中舉例了常用的表格操作功能，如勾選、排序、分頁。<br />
+        雖然看來是很複雜的功能，但有了Table元件協助，程式碼閱讀上相對容易。
+      </div>
+    </div>
+    <div class="col-12 bg-white py-3">
+      <div class="title mb-2">
+        Demo展示
+        <span class="goCode"
+          ><a
+            target="_blank"
+            href="https://github.com/unromanticman/vue-cheatsheet/blob/master/src/views/TableDemo.vue"
+            >( 點我前往程式碼 <i class="fas fa-external-link-alt"></i> )</a
+          ></span
         >
-          <template v-slot:cell(selected)="data">
-            <input type="checkbox" v-model="data.item.selected" />
-          </template>
-        </b-table>
-        <div style="margin: auto; text-align: center">
-          <b-pagination
-            align="center"
-            v-model="currentPage"
-            :total-rows="rows"
+      </div>
+      <div class="text-center mt-3">
+        <div class="overflow-auto text-left">
+          <div class="text-left mb-2" v-if="selectedCount > 0">
+            已勾選:{{ selectedCount }}
+          </div>
+          <b-table
+            striped
+            id="my-table"
+            :items="items"
             :per-page="perPage"
-            aria-controls="my-table"
-          ></b-pagination>
-          <p class="mt-3">Current Page: {{ currentPage }}</p>
+            :current-page="currentPage"
+            small
+            hover
+            :fields="column"
+          >
+            <template v-slot:cell(selected)="data">
+              <input type="checkbox" v-model="data.item.selected" />
+            </template>
+          </b-table>
+          <div style="margin: auto; text-align: center">
+            <b-pagination
+              align="center"
+              v-model="currentPage"
+              :total-rows="rows"
+              :per-page="perPage"
+              aria-controls="my-table"
+            ></b-pagination>
+            <p class="mt-3">Current Page: {{ currentPage }}</p>
+          </div>
         </div>
       </div>
     </div>

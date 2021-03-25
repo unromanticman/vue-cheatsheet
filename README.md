@@ -17,6 +17,7 @@
 7.  頁面特效
 8.  驗證錯誤用提示元件
 9.  BootstrapVue Table元件使用範例
+10. SCSS編譯&Bootstrap配置
 
 ## Project setup
 ```

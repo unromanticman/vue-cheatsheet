@@ -1,5 +1,5 @@
 <template>
-  <input type="number" v-bind:value="number" v-on:change="handlerChange" />
+  <input type="text"  class="form-control" v-bind:value="number" v-on:change="handlerChange" />
 </template>
 
 <script>
