@@ -7,6 +7,7 @@ import ComponentDemo from '../views/ComponentDemo.vue'
 import APIDemo from '../views/APIDemo.vue'
 import ValidactionDemo from '../views/ValidactionDemo.vue'
 import TableDemo from '../views/TableDemo.vue'
+import NotFound from '../views/NotFound.vue'
 
 Vue.use(VueRouter)
 
@@ -53,7 +54,17 @@ const routes = [
     component: TableDemo,
     props: { pageName: 'Table Demo' }
   },
-  
+  {
+    path: '/404',
+    name: 'NotFound',
+    component: NotFound,
+    props: { pageName: 'NotFound' }
+  },
+  {
+    path: '*',
+    redirect: '/404',
+    hidden: true
+  }
 ]
 
 const router = new VueRouter({
