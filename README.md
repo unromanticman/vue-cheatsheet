@@ -18,6 +18,7 @@
 8.  驗證錯誤用提示元件
 9.  BootstrapVue Table元件使用範例
 10. SCSS編譯&Bootstrap配置
+11. 路由追蹤(未找到頁面匹配導向404頁面)
 
 ## Project setup
 ```
