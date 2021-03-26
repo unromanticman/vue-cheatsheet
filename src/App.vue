@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <div class="bg-watermark"></div>
+    <div class="bg-watermark"></div>
     <div class="container">
       <div class="col-12 bg-white mb-3 p-3 header">
         <div class="title mb-3 text-center">VUE CHEATSHEET</div>
@@ -24,7 +24,6 @@
       <vue-page-transition name="fade-in-up">
         <router-view />
       </vue-page-transition>
-
       <footer class="col-12 p-3">
         <div class="text-center">
           Copyright © 2021 unromanticman. All rights reserved.
@@ -33,3 +32,17 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  watch: {
+    $route: {
+      handler: function (to) {
+        console.log(to.path);
+      },
+      immediate: true,
+      deep:true
+    },
+  },
+};
+</script>
