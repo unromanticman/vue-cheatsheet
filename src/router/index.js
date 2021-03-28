@@ -89,7 +89,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash', // history與hash差別在重新整理，如果沒實體檔案history重整會掛掉，hash則不會
   base: process.env.BASE_URL,
   routes
 })
