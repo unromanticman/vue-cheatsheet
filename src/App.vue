@@ -18,7 +18,12 @@
           <router-link to="/componentDemo">Component Demo</router-link> |
           <router-link to="/apiDemo">API Demo</router-link> |
           <router-link to="/validactionDemo">Validaction Demo</router-link> |
-          <router-link to="/tableDemo">Table Demo</router-link>
+          <router-link to="/tableDemo">Table Demo</router-link> |
+          <router-link
+            to="/routerDemo/subPage1"
+            :class="{ 'router-link-exact-active ': subIsActive('/routerDemo') }"
+            >Router Demo</router-link
+          >
         </div>
       </div>
       <vue-page-transition name="fade-in-up">
@@ -41,7 +46,16 @@ export default {
         console.log(to.path);
       },
       immediate: true,
-      deep:true
+      deep: true,
+    },
+  },
+  methods: {
+    // nested active solution:https://forum.vuejs.org/t/router-active-class-on-submenu-parent/7027
+    subIsActive(input) {
+      const paths = Array.isArray(input) ? input : [input];
+      return paths.some((path) => {
+        return this.$route.path.indexOf(path) === 0; // current path starts with this path string
+      });
     },
   },
 };

@@ -8,6 +8,9 @@ import APIDemo from '../views/APIDemo.vue'
 import ValidactionDemo from '../views/ValidactionDemo.vue'
 import TableDemo from '../views/TableDemo.vue'
 import NotFound from '../views/NotFound.vue'
+import RouterDemo from '../views/RouterDemo.vue'
+import RouterSubPage1 from '../views/RouterSubPage1.vue'
+import RouterSubPage2 from '../views/RouterSubPage2.vue'
 
 Vue.use(VueRouter)
 
@@ -53,6 +56,24 @@ const routes = [
     name: 'TableDemo',
     component: TableDemo,
     props: { pageName: 'Table Demo' }
+  },
+  {
+    path: '/routerDemo',
+    name: 'routerDemo',
+    component: RouterDemo,
+    props: { pageName: 'Router Demo' },
+    children: [
+      {
+        path: 'subPage1',
+        name: 'subPage2',
+        component: RouterSubPage1
+      },
+      {
+        path: 'subPage2',
+        name: 'subPage2',
+        component: RouterSubPage2
+      },
+    ]
   },
   {
     path: '/404',
