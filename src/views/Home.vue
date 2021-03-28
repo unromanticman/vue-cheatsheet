@@ -26,6 +26,8 @@
           <li>驗證錯誤用提示元件</li>
           <li>BootstrapVue Table元件使用範例</li>
           <li>SCSS編譯&Bootstrap配置</li>
+          <li>路由追蹤(未找到頁面匹配導向404頁面)</li>
+          <li>巢狀路由範例</li>
         </ol>
       </div>
     </div>
