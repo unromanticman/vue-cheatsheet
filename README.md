@@ -41,5 +41,15 @@ npm run build
 npm run lint
 ```
 
+### git pages
+```
+npm run build
+cd dist 
+git init 
+git add -A
+git commit -m 'deploy'
+git push -f https://github.com/unromanticman/vue-cheatsheet.git master:gh-pages
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
