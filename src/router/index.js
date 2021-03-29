@@ -47,7 +47,7 @@ const routes = [
   },
   {
     path: '/validactionDemo',
-    name: 'APIDemo',
+    name: 'ValidactionDemo',
     component: ValidactionDemo,
     props: { pageName: 'Validaction Demo' }
   },
@@ -65,7 +65,7 @@ const routes = [
     children: [
       {
         path: 'subPage1',
-        name: 'subPage2',
+        name: 'subPage1',
         component: RouterSubPage1
       },
       {
