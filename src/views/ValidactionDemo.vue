@@ -42,20 +42,20 @@ import Validation from "@/components/Validation.vue";
 export default {
   name: "About",
   components: { Validation },
-  data: function () {
+  props:['pageName'],
+  data:function(){
     return {
-      text: "100",
-    };
+      txt:'100',
+    }
   },
-  computed: {
-    errorMsg: function () {
-      if (this.text.length > 3) {
-        return "必須小於三個字";
-      } else {
-        return null;
+  computed:{
+    errorMsg:function(){
+      if(this.txt.length>3){
+        return '必須小於三字';
+      }else{
+        return '';
       }
-    },
+    }
   },
-  props: ["pageName"],
-};
+ };
 </script>

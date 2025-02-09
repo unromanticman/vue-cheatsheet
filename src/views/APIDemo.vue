@@ -51,8 +51,9 @@ export default {
     this.fetchUser();
   },
   methods: {
-    fetchUser: function () {
-      fetch("https://randomuser.me/api/")
+    fetchUser: async function () {
+      this.alertMsg();
+      await fetch("https://randomuser.me/api/")
         .then((res) => res.json())
         .then((res) => {
           if (res.results.length > 0) {
@@ -60,6 +61,9 @@ export default {
           }
         });
     },
+    alertMsg:function(){
+      console('開始載入API中...')
+    }
   },
   mounted: function () {
     // dom 初始完成如果要操作dom可以在這裡
